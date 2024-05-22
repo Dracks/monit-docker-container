@@ -2,6 +2,8 @@
 
 PID_FOLDERS=/var/run/docker-compose/
 
+mkdir -p $PID_FOLDERS
+
 list_containers=`docker ps -f status=running --format "{{.Names}}"`
 
 # rm "$PID_FOLDERS*"
